@@ -4,13 +4,14 @@ import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
+  const filter = useSelector(selectFilter);
 
   const handleChange = e => dispatch(setFilter(e.currentTarget.value));
 
   return (
     <Label>
       Find contacts by name
-      <Input type="text" onChange={handleChange} />
+      <Input type="text" value={filter} onChange={handleChange} />
     </Label>
   );
 };
