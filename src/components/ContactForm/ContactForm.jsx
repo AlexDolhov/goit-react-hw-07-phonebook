@@ -39,7 +39,7 @@ export const ContactForm = () => {
     const normalisedName = name.toLowerCase();
 
     const addContactHandle = () => {
-      dispatch(addContact(name, number));
+      dispatch(addContact(value));
       resetForm();
     };
 
